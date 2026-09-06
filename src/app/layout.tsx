@@ -17,7 +17,7 @@ const description =
   "Check, visualize, and understand how browsers handle your cookies. Analyze Set-Cookie headers, storage, request matching, SameSite, Secure, HttpOnly, Domain and Path behavior.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cookiecheckup.dev"),
+  metadataBase: new URL("https://cookie-checkup.vercel.app"),
   title,
   description,
   openGraph: {

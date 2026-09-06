@@ -5,6 +5,8 @@
 
 > Check, visualize, and understand how browsers handle your cookies.
 
+**[Live demo](https://cookie-checkup.vercel.app)**
+
 CookieCheckup is an open-source browser cookie simulator that helps developers understand whether a `Set-Cookie` configuration will be accepted, how it will be stored, when it will be sent, and whether JavaScript can access it.
 
 ![CookieCheckup screenshot](docs/screenshot.png)

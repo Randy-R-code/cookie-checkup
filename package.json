@@ -16,12 +16,15 @@
     "cookie-simulator"
   ],
   "license": "MIT",
-  "author": "Randy-R-code <randy.rimbault@myyahoo.com> (https://github.com/Randy-R-code)",
+  "author": {
+    "name": "Randy-R-code",
+    "url": "https://github.com/Randy-R-code"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Randy-R-code/cookie-checkup.git"
   },
-  "homepage": "https://github.com/Randy-R-code/cookie-checkup#readme",
+  "homepage": "https://cookie-checkup.vercel.app",
   "bugs": {
     "url": "https://github.com/Randy-R-code/cookie-checkup/issues"
   },
