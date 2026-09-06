@@ -2,11 +2,37 @@
   "name": "cookie-checkup",
   "version": "0.1.0",
   "private": true,
+  "description": "Check, visualize, and understand how browsers handle your cookies.",
+  "keywords": [
+    "cookie",
+    "set-cookie",
+    "http",
+    "browser",
+    "developer-tools",
+    "samesite",
+    "httponly",
+    "secure-cookie",
+    "cookie-debugger",
+    "cookie-simulator"
+  ],
+  "license": "MIT",
+  "author": "Randy-R-code <randy.rimbault@myyahoo.com> (https://github.com/Randy-R-code)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Randy-R-code/cookie-checkup.git"
+  },
+  "homepage": "https://github.com/Randy-R-code/cookie-checkup#readme",
+  "bugs": {
+    "url": "https://github.com/Randy-R-code/cookie-checkup/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "lucide-react": "^1.41.0",
