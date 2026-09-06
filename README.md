@@ -1,5 +1,6 @@
 # CookieCheckup
 
+[![CI](https://github.com/Randy-R-code/cookie-checkup/actions/workflows/ci.yml/badge.svg)](https://github.com/Randy-R-code/cookie-checkup/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 > Check, visualize, and understand how browsers handle your cookies.
@@ -82,16 +83,17 @@ CookieCheckup uses a standards-oriented modern browser model. Browser-specific p
 ```bash
 pnpm dev             # start the app
 pnpm lint            # eslint
+pnpm typecheck       # tsc --noEmit
 pnpm test            # vitest run
 pnpm test:watch      # vitest, watch mode
 pnpm test:coverage   # vitest run --coverage
 pnpm build           # production build
 ```
 
-Before pushing meaningful simulator changes:
+Before pushing meaningful simulator changes — this is also what CI runs on every push and pull request:
 
 ```bash
-pnpm lint && pnpm test && pnpm build
+pnpm lint && pnpm typecheck && pnpm test && pnpm build
 ```
 
 ## Tests
@@ -104,7 +106,7 @@ Deliberately postponed for now (see the codebase for the full list of non-goals)
 
 ## Contributing
 
-Issues and pull requests are welcome. Keep pull requests focused on a single change, and run `pnpm lint && pnpm test && pnpm build` before opening one. Use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages (`feat:`, `fix:`, `docs:`, `test:`, `chore:`, ...).
+Issues and pull requests are welcome. Keep pull requests focused on a single change, and run `pnpm lint && pnpm typecheck && pnpm test && pnpm build` before opening one — the same checks run in CI on every push and pull request. Use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages (`feat:`, `fix:`, `docs:`, `test:`, `chore:`, ...).
 
 ## License
 
