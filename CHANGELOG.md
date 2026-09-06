@@ -5,6 +5,12 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-09-06
+
+### Added
+
+- Vercel Web Analytics and Speed Insights on the hosted demo, for aggregate traffic and performance measurements only. Cookie headers, cookie values, simulator inputs, and scenario data are never intentionally sent as analytics properties — documented in a new README Privacy section.
+
 ## [0.1.0] - 2026-09-06
 
 ### Added
@@ -17,4 +23,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A visual identity built on the Lucide `Cookie` icon, a favicon, a generated Open Graph card, and Open Graph/Twitter metadata.
 - A GitHub Actions CI workflow running lint, typecheck, tests, and build on every push and pull request.
 
+[0.1.1]: https://github.com/Randy-R-code/cookie-checkup/releases/tag/v0.1.1
 [0.1.0]: https://github.com/Randy-R-code/cookie-checkup/releases/tag/v0.1.0

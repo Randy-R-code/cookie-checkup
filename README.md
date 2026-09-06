@@ -1,5 +1,6 @@
 # CookieCheckup
 
+[![release](https://img.shields.io/github/v/release/Randy-R-code/cookie-checkup)](https://github.com/Randy-R-code/cookie-checkup/releases)
 [![CI](https://github.com/Randy-R-code/cookie-checkup/actions/workflows/ci.yml/badge.svg)](https://github.com/Randy-R-code/cookie-checkup/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -79,6 +80,10 @@ JavaScript accessible / protected
 ## Accuracy and browser differences
 
 CookieCheckup uses a standards-oriented modern browser model. Browser-specific policies, the `localhost` secure-context exception, and experimental behavior (like `__Http-` / `__Host-Http-`, which are forward-looking and not yet implemented everywhere) may differ from what a specific browser actually does. Findings in the `compatibility` category call this out explicitly. CookieCheckup is not a linter for live traffic, a security scanner, or a replacement for your browser's DevTools — it is a deterministic teaching and debugging companion.
+
+## Privacy
+
+Cookie simulations run locally in your browser. The hosted demo uses Vercel Web Analytics and Speed Insights for aggregate traffic and performance measurements. Cookie headers, cookie values, simulator inputs, and scenario data are never intentionally sent as analytics properties.
 
 ## Development
 

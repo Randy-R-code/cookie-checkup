@@ -35,8 +35,8 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-1 text-xs text-zinc-500 sm:max-w-sm sm:text-right">
           <p>
-            Runs locally in your browser. Nothing you configure here is sent to
-            a server.
+            Cookie simulations run locally in your browser. Nothing you
+            configure here is sent to a server.
           </p>
           <p>
             Standards-oriented modern browser model — browser-specific policies
