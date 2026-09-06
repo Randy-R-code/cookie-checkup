@@ -1,20 +1,20 @@
 import type { FindingSeverity } from "@/types/cookie";
-import { AlertTriangle, CheckCircle2, Info, XCircle } from "lucide-react";
+import { CircleCheck, CircleX, Info, TriangleAlert } from "lucide-react";
 
 const CONFIG: Record<
   FindingSeverity,
-  { Icon: typeof CheckCircle2; className: string }
+  { Icon: typeof CircleCheck; className: string }
 > = {
   success: {
-    Icon: CheckCircle2,
+    Icon: CircleCheck,
     className: "text-emerald-600 dark:text-emerald-400",
   },
   info: { Icon: Info, className: "text-sky-600 dark:text-sky-400" },
   warning: {
-    Icon: AlertTriangle,
+    Icon: TriangleAlert,
     className: "text-amber-600 dark:text-amber-400",
   },
-  error: { Icon: XCircle, className: "text-red-600 dark:text-red-400" },
+  error: { Icon: CircleX, className: "text-red-600 dark:text-red-400" },
 };
 
 export function StatusIcon({ severity }: { severity: FindingSeverity }) {

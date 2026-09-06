@@ -1,6 +1,7 @@
 "use client";
 
 import type { Finding } from "@/types/cookie";
+import { Copy } from "lucide-react";
 import { useState } from "react";
 import { FindingList } from "./finding-list";
 
@@ -34,8 +35,9 @@ export function CookieHeaderInput({
         <button
           type="button"
           onClick={copyHeader}
-          className="text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+          className="flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
         >
+          <Copy aria-hidden="true" className="h-3.5 w-3.5" />
           {copied ? "Copied!" : "Copy"}
         </button>
       </div>

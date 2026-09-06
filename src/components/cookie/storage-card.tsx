@@ -1,12 +1,20 @@
 import { Card } from "@/components/ui/card";
 import type { CookieSimulationResult } from "@/types/cookie";
+import { Database } from "lucide-react";
 import { EffectiveCookieTable } from "./effective-cookie";
 import { FindingList } from "./finding-list";
+
+const TITLE = (
+  <span className="flex items-center gap-1.5">
+    <Database aria-hidden="true" className="h-4 w-4" />
+    Stored cookie
+  </span>
+);
 
 export function StorageCard({ result }: { result: CookieSimulationResult }) {
   if (!result.acceptance.accepted) {
     return (
-      <Card title="Stored cookie">
+      <Card title={TITLE}>
         <p className="text-sm text-zinc-500">
           Not stored — the cookie was rejected.
         </p>
@@ -17,7 +25,7 @@ export function StorageCard({ result }: { result: CookieSimulationResult }) {
   if (!result.storage) return null;
 
   return (
-    <Card title="Stored cookie">
+    <Card title={TITLE}>
       <EffectiveCookieTable
         cookie={result.storage.cookie}
         sessionCookie={result.storage.sessionCookie}

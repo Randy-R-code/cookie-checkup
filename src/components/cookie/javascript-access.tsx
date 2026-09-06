@@ -1,6 +1,14 @@
 import { Card } from "@/components/ui/card";
 import type { CookieSimulationResult } from "@/types/cookie";
+import { Code } from "lucide-react";
 import { FindingList } from "./finding-list";
+
+const TITLE = (
+  <span className="flex items-center gap-1.5">
+    <Code aria-hidden="true" className="h-4 w-4" />
+    JavaScript access
+  </span>
+);
 
 export function JavascriptAccess({
   result,
@@ -10,7 +18,7 @@ export function JavascriptAccess({
   if (!result.javascript) return null;
 
   return (
-    <Card title="JavaScript access">
+    <Card title={TITLE}>
       <p
         className={`mb-3 text-sm font-semibold ${
           result.javascript.accessible

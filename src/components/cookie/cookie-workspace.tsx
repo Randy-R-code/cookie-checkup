@@ -13,6 +13,7 @@ import type {
   CookieRequestContextInput,
   CookieSetContextInput,
 } from "@/types/cookie";
+import { RotateCcw, Share2 } from "lucide-react";
 import { useMemo, useState } from "react";
 import { CookieBuilder } from "./cookie-builder";
 import { CookieHeaderInput } from "./cookie-header-input";
@@ -109,15 +110,17 @@ export function CookieWorkspace() {
                 <button
                   type="button"
                   onClick={copyShareLink}
-                  className="text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  className="flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
                 >
+                  <Share2 aria-hidden="true" className="h-3.5 w-3.5" />
                   {copiedLink ? "Link copied!" : "Copy link"}
                 </button>
                 <button
                   type="button"
                   onClick={reset}
-                  className="text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  className="flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
                 >
+                  <RotateCcw aria-hidden="true" className="h-3.5 w-3.5" />
                   Reset
                 </button>
               </div>

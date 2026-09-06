@@ -12,10 +12,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "CookieCheckup — Browser Cookie Simulator";
+const description =
+  "Check, visualize, and understand how browsers handle your cookies. Analyze Set-Cookie headers, storage, request matching, SameSite, Secure, HttpOnly, Domain and Path behavior.";
+
 export const metadata: Metadata = {
-  title: "CookieCheckup — Browser Cookie Simulator",
-  description:
-    "Check, visualize, and understand how browsers handle your cookies. Analyze Set-Cookie headers, storage, request matching, SameSite, Secure, HttpOnly, Domain and Path behavior.",
+  metadataBase: new URL("https://cookiecheckup.dev"),
+  title,
+  description,
+  openGraph: {
+    title: "CookieCheckup — Browser Cookie Simulator",
+    description:
+      "Check, visualize, and understand how browsers handle your cookies.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CookieCheckup — Browser Cookie Simulator",
+    description:
+      "Check, visualize, and understand how browsers handle your cookies.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
