@@ -1,6 +1,7 @@
 "use client";
 
 import type { Finding } from "@/types/cookie";
+import { useState } from "react";
 import { FindingList } from "./finding-list";
 
 export function CookieHeaderInput({
@@ -12,16 +13,32 @@ export function CookieHeaderInput({
   onChange: (value: string) => void;
   findings: Finding[];
 }) {
+  const [copied, setCopied] = useState(false);
   const hasError = findings.some((finding) => finding.severity === "error");
+
+  async function copyHeader() {
+    await navigator.clipboard.writeText(value);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  }
 
   return (
     <div className="flex flex-col gap-2">
-      <label
-        htmlFor="raw-header"
-        className="text-xs font-medium text-zinc-600 dark:text-zinc-400"
-      >
-        Set-Cookie header
-      </label>
+      <div className="flex items-center justify-between">
+        <label
+          htmlFor="raw-header"
+          className="text-xs font-medium text-zinc-600 dark:text-zinc-400"
+        >
+          Set-Cookie header
+        </label>
+        <button
+          type="button"
+          onClick={copyHeader}
+          className="text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+        >
+          {copied ? "Copied!" : "Copy"}
+        </button>
+      </div>
       <textarea
         id="raw-header"
         value={value}

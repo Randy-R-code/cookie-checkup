@@ -1,4 +1,4 @@
-import { CookieWorkspace } from "@/components/cookie/cookie-workspace";
+import { CookieWorkspaceLoader } from "@/components/cookie/cookie-workspace-loader";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 
@@ -17,7 +17,7 @@ export default function Home() {
             to JavaScript.
           </p>
         </div>
-        <CookieWorkspace />
+        <CookieWorkspaceLoader />
       </main>
       <Footer />
     </div>
